@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import SawoLogin from "sawo-react";
 
 function App() {
+  function sawoLoginCAllBack(payload) {
+    console.log(payload);
+  }
+  const sawoConfig = {
+    onSucces: sawoLoginCAllBack,
+    identifierType: "email",
+    apiKey: "2198b645-1340-48d1-9bc9-a90e84a102e7",
+    containerHeight: "230px",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <SawoLogin config={sawoConfig} />
     </div>
   );
 }
