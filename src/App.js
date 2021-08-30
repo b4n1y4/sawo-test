@@ -7,7 +7,7 @@ function App() {
   const sawoConfig = {
     onSucces: sawoLoginCAllBack,
     identifierType: "email",
-    apiKey: "2198b645-1340-48d1-9bc9-a90e84a102e7",
+    apiKey: process.env.REACT_APP_API_KEY,
     containerHeight: "230px",
   };
   return (
